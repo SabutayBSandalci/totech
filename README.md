@@ -176,6 +176,10 @@ Bu proje MIT lisansı ile lisanslanmıştır.
 - ✅ İletişim formu
 - ✅ Brand story card tasarımı
 
+## 📄 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
+
 ---
 
 **Totech** - Teknolojiye Giden Yol 🚀 
