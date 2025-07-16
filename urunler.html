@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ürünlerimiz - En Son Teknoloji Ürünleri | Totech">
+    <title>Ürünlerimiz - Totech</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html"> <h1> Totech</h1></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+                    <li><a href="urunler.html" class="nav-link active">Ürünler</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbar-search">
+                <input type="search" placeholder="Ürün ara..." class="search-input">
+                <button type="submit" class="search-btn">Ara</button>
+            </div>
+            
+            <div class="theme-dropdown">
+                <button class="theme-dropdown-btn" onclick="toggleThemeDropdown()">
+                    <i class="fas fa-palette"></i>
+                    <span>Tema</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="theme-dropdown-menu" id="themeDropdown">
+                    <button onclick="setTheme('light')" class="theme-option">
+                        <i class="fas fa-sun"></i>
+                        Açık Tema
+                    </button>
+                    <button onclick="setTheme('dark')" class="theme-option">
+                        <i class="fas fa-moon"></i>
+                        Koyu Tema
+                    </button>
+                    <button onclick="setTheme('blue')" class="theme-option">
+                        <i class="fas fa-droplet"></i>
+                        Soft Tema
+                    </button>
+                </div>
+            </div>
+            
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Teknoloji Ürünlerimiz</h1>
+                <p class="hero-description">En son teknoloji ile üretilmiş, kaliteli ve uygun fiyatlı ürünler. Orijinal ürünler, 2 yıl garanti ve ücretsiz kargo avantajıyla.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="filter-container">
+                <h2>Kategoriler</h2>
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">Tümü</button>
+                    <button class="filter-btn" data-category="ses">Ses Cihazları</button>
+                    <button class="filter-btn" data-category="giyilebilir">Giyilebilir Teknoloji</button>
+                    <button class="filter-btn" data-category="bilgisayar">Bilgisayar Aksesuarları</button>
+                    <button class="filter-btn" data-category="sarj">Şarj Çözümleri</button>
+                </div>
+            </div>
+        </section>      
+        <section class="section">
+            <div class="products-grid">
+                <article class="product-card" data-category="ses">
+                    <div class="product-badge">Yeni</div>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Premium Kablosuz Kulaklık">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Premium Kablosuz Kulaklık</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <p class="card-description">Yüksek kaliteli ses deneyimi sunan kablosuz kulaklık. Aktif gürültü engelleme özelliği ile mükemmel ses kalitesi. 30 saate kadar müzik dinleme süresi.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Aktif Gürültü Engelleme</span>
+                            <span class="feature-tag">30 Saat Batarya</span>
+                            <span class="feature-tag">Hızlı Şarj</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺1.299</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="ses">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Kablosuz Hoparlör">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kablosuz Hoparlör</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.6)</span>
+                        </div>
+                        <p class="card-description">Taşınabilir kablosuz hoparlör. Güçlü bas performansı ve 360 derece ses deneyimi ile her ortamda kaliteli müzik. Su geçirmez tasarım.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">360° Ses</span>
+                            <span class="feature-tag">Su Geçirmez</span>
+                            <span class="feature-tag">12 Saat Batarya</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺899</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="giyilebilir">
+                    <div class="product-badge bestseller">Çok Satan</div>
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Akıllı Saat Pro">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Akıllı Saat Pro</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <p class="card-description">Gelişmiş sağlık takibi ve kondisyon özellikleri ile donatılmış akıllı saat. Su geçirmez tasarım ve uzun batarya ömrü. GPS ve kalp ritmi takibi.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">GPS Takibi</span>
+                            <span class="feature-tag">Kalp Ritmi</span>
+                            <span class="feature-tag">7 Gün Batarya</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺2.599</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="giyilebilir">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Fitness Bilekliği">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Fitness Bilekliği</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.4)</span>
+                        </div>
+                        <p class="card-description">Ekonomik fitness takip bilekliği. Adım sayar, kalori hesaplama ve uyku analizi özellikleri. Su geçirmez ve hafif tasarım.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Adım Sayar</span>
+                            <span class="feature-tag">Uyku Analizi</span>
+                            <span class="feature-tag">14 Gün Batarya</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺399</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bilgisayar">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Oyuncu Faresi">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Oyuncu Faresi Pro</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.7)</span>
+                        </div>
+                        <p class="card-description">Profesyonel oyuncular için tasarlanmış ergonomik oyuncu faresi. Yüksek DPI (nokta/inç) hassasiyeti ve özelleştirilebilir butonlar. RGB aydınlatma.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">16000 DPI</span>
+                            <span class="feature-tag">RGB Aydınlatma</span>
+                            <span class="feature-tag">8 Programlanabilir Buton</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺549</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bilgisayar">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1616578781650-cd818fa41e57?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="USB-C Çoklayıcı">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">USB-C Çoklayıcı</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.5)</span>
+                        </div>
+                        <p class="card-description">Çok fonksiyonlu USB-C çoklayıcı. HDMI, USB 3.0, SD kart okuyucu ve hızlı şarj desteği. Ultra ince dizüstü bilgisayarlar için ideal.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">7-in-1 Port</span>
+                            <span class="feature-tag">4K HDMI</span>
+                            <span class="feature-tag">100W Güç Geçişi</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺799</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="bilgisayar">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Mekanik Klavye">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mekanik Klavye RGB</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.9)</span>
+                        </div>
+                        <p class="card-description">Yüksek kaliteli mekanik anahtarlı klavye. RGB aydınlatma, programlanabilir makrolar ve anti-ghosting teknolojisi. Oyun ve iş için ideal.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">Mekanik Anahtar</span>
+                            <span class="feature-tag">RGB Aydınlatma</span>
+                            <span class="feature-tag">Anti-Ghosting</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺1.199</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="sarj">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1617975426095-f073792aef15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kablosuz Şarj Standı">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Kablosuz Şarj Standı</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-text">(4.3)</span>
+                        </div>
+                        <p class="card-description">Hızlı kablosuz şarj teknolojisi. Tüm Qi uyumlu cihazlarla çalışır. Şık ve minimalist tasarım. Ayarlanabilir açı ile video izleme desteği.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">15W Hızlı Şarj</span>
+                            <span class="feature-tag">Ayarlanabilir Açı</span>
+                            <span class="feature-tag">Qi Uyumlu</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺299</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="sarj">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1564286027156-9ad736dfbbbb?q=80&w=1072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Taşınabilir Batarya">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Taşınabilir Batarya 20000mAh</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-text">(4.8)</span>
+                        </div>
+                        <p class="card-description">Yüksek kapasiteli taşınabilir şarj cihazı. 20000mAh kapasitesi ile birden fazla cihazı şarj edebilir. Hızlı şarj ve kablosuz şarj desteği.</p>
+                        <div class="card-features">
+                            <span class="feature-tag">20000mAh</span>
+                            <span class="feature-tag">Kablosuz Şarj</span>
+                            <span class="feature-tag">PD 22.5W</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₺699</div>
+                            <button class="btn btn-primary">Sepete Ekle</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section features-section">
+            <h2>Neden Totech?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Hızlı Teslimat</h3>
+                    <p>Türkiye genelinde 24-48 saat içinde ücretsiz kargo ile kapınızda.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>2 Yıl Garanti</h3>
+                    <p>Tüm ürünlerimizde 2 yıl resmi distribütör garantisi sunuyoruz.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>7/24 Destek</h3>
+                    <p>Teknik destek ekibimiz size 7/24 yardımcı olmaya hazır.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Kolay İade</h3>
+                    <p>14 gün içinde hiçbir soru sormadan iade hakkınız var.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Tema sistemi - Geliştirilmiş versiyon
+        function setTheme(theme) {
+            const navbar = document.getElementById('navbar');
+            const body = document.body;
+            
+            // Eski tema sınıflarını temizle
+            navbar.className = navbar.className.replace(/navbar-(light|dark|blue)/g, '');
+            body.className = body.className.replace(/theme-(light|dark|blue)/g, '');
+            
+            // Yeni tema sınıflarını ekle
+            navbar.classList.add(`navbar-${theme}`);
+            body.classList.add(`theme-${theme}`);
+            
+            // Tema tercihini kaydet
+            localStorage.setItem('theme', theme);
+            
+            // Buton metnini güncelle
+            updateThemeButtonText(theme);
+            
+            // Dropdown'u kapat
+            closeThemeDropdown();
+            
+            // Tema değişikliği için animasyon
+            body.style.opacity = '0.95';
+            setTimeout(() => {
+                body.style.opacity = '1';
+            }, 150);
+        }
+        
+        function updateThemeButtonText(theme) {
+            const themeNames = {
+                'light': 'Açık Tema',
+                'dark': 'Koyu Tema', 
+                'blue': 'Soft Tema'
+            };
+            const button = document.querySelector('.theme-dropdown-btn span');
+            if (button) {
+                button.textContent = themeNames[theme] || 'Tema';
+            }
+        }
+        
+        function toggleThemeDropdown() {
+            const dropdown = document.getElementById('themeDropdown');
+            const button = document.querySelector('.theme-dropdown-btn');
+            
+            if (dropdown.classList.contains('show')) {
+                closeThemeDropdown();
+            } else {
+                dropdown.classList.add('show');
+                button.classList.add('active');
+            }
+        }
+        
+        function closeThemeDropdown() {
+            const dropdown = document.getElementById('themeDropdown');
+            const button = document.querySelector('.theme-dropdown-btn');
+            dropdown.classList.remove('show');
+            button.classList.remove('active');
+        }
+        
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        // Sayfa yüklendiğinde çalışacak fonksiyonlar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dropdown dışına tıklama kontrolü
+            document.addEventListener('click', function(event) {
+                const dropdown = document.querySelector('.theme-dropdown');
+                if (!dropdown.contains(event.target)) {
+                    closeThemeDropdown();
+                }
+            });
+            
+            // Mobil menü toggle
+            const mobileToggle = document.querySelector('.navbar-toggle');
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', toggleMobileMenu);
+            }
+            
+            // Navigasyon linklerine tıklama olayları
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const menu = document.querySelector('.navbar-menu');
+                    const toggle = document.querySelector('.navbar-toggle');
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                });
+            });
+            
+            // Kaydedilmiş temayı yükle
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+            
+            // Ürün kartlarına staggered animasyon ekle
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 100}ms`;
+                card.classList.add('animate-fade-in');
+            });
+            
+            // Aktif sayfa linkini işaretle
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const activeLink = document.querySelector(`[href="${currentPage}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+        
+        // Ürün filtreleme sistemi
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Tüm filtre butonlarından active sınıfını kaldır
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Tıklanan butona active sınıfını ekle
+                btn.classList.add('active');
+                
+                const category = btn.dataset.category;
+                const products = document.querySelectorAll('.product-card');
+                
+                // Ürünleri filtrele
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.style.display = 'block';
+                        product.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

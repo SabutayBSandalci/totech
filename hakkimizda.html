@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hakkımızda - Totech Teknoloji Ürünleri Mağazası | Güvenilir E-Ticaret Deneyimi">
+    <title>Hakkımızda - Totech</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html"> <h1> Totech</h1></a>
+            </div>
+            
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html" class="nav-link active">Hakkımızda</a></li>
+                    <li><a href="urunler.html" class="nav-link">Ürünler</a></li>
+                </ul>
+            </div>
+            
+            <div class="navbar-search">
+                <input type="search" placeholder="Ürün ara..." class="search-input">
+                <button type="submit" class="search-btn">Ara</button>
+            </div>
+            
+            <div class="theme-dropdown">
+                <button class="theme-dropdown-btn" onclick="toggleThemeDropdown()">
+                    <i class="fas fa-palette"></i>
+                    <span>Tema</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="theme-dropdown-menu" id="themeDropdown">
+                    <button onclick="setTheme('light')" class="theme-option">
+                        <i class="fas fa-sun"></i>
+                        Açık Tema
+                    </button>
+                    <button onclick="setTheme('dark')" class="theme-option">
+                        <i class="fas fa-moon"></i>
+                        Koyu Tema
+                    </button>
+                    <button onclick="setTheme('blue')" class="theme-option">
+                        <i class="fas fa-droplet"></i>
+                        Soft Tema
+                    </button>
+                </div>
+            </div>
+            
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Hakkımızda</h1>
+                <p class="hero-description">Türkiye'nin en güvenilir teknoloji ürünleri e-ticaret platformu olarak, dijital yaşamınızı kolaylaştırıyoruz.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="about-container">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Misyonumuz</h3>
+                    <p>En kaliteli teknoloji ürünlerini uygun fiyatlarla müşterilerimize sunmak, güvenilir alışveriş deneyimi yaşatmak ve teknolojiye erişimi kolaylaştırmak.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Vizyonumuz</h3>
+                    <p>Teknoloji ürünleri e-ticaretinde Türkiye'nin lider platformu olmak ve müşteri memnuniyetinde sektörün standardını belirlemek.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Değerlerimiz</h3>
+                    <p>Güvenilirlik, müşteri odaklılık, kalite, hızlı teslimat ve satış sonrası destek. Her alışverişte bu değerlerle hizmet sunuyoruz.</p>
+                </div>
+            </div>
+        </section>          
+        <section class="section story-section">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Hikayemiz</h2>
+                    <p>Totech, 2020 yılında teknoloji tutkunu bir grup girişimci tarafından kuruldu. Amacımız, insanların en son teknoloji ürünlerine kolay ve güvenli bir şekilde ulaşmasını sağlamaktı.</p>
+                    
+                    <p>Bugün, 10.000'den fazla mutlu müşteri ile Türkiye'nin önde gelen teknoloji ürünleri e-ticaret platformlarından biri haline geldik. Kablosuz kulaklıklardan akıllı saatlere, oyuncu ekipmanlarından şarj çözümlerine kadar geniş ürün yelpazemizle teknoloji severlerin tercihi olduk.</p>
+                    
+                    <p>Geleceğe bakışımız ise daha da heyecan verici: Yapay zeka destekli öneri sistemleri, sanal gerçeklik deneyimleri ve sürdürülebilir teknoloji ürünleri ile sektörde yenilikçi çözümler sunmaya devam edeceğiz.</p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Totech E-Ticaret Mağazası">
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2>Ekibimiz</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Ahmet Yılmaz">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ahmet Yılmaz</h3>
+                        <p class="team-role">Kurucu & CEO</p>
+                        <p class="team-description">10+ yıllık e-ticaret deneyimi. Teknoloji ürünleri pazarında uzman, müşteri deneyimi odaklı stratejiler geliştiriyor.</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Zeynep Kaya">
+                    </div>
+                    <div class="team-info">
+                        <h3>Zeynep Kaya</h3>
+                        <p class="team-role">Ürün Müdürü</p>
+                        <p class="team-description">Teknoloji trendleri uzmanı. En yeni ürünlerin keşfi ve ürün katalogumuzun zenginleştirilmesi konularında sorumlu.</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Mehmet Özkan">
+                    </div>
+                    <div class="team-info">
+                        <h3>Mehmet Özkan</h3>
+                        <p class="team-role">Teknik Direktör</p>
+                        <p class="team-description">E-ticaret platform geliştirme uzmanı. Güvenli ödeme sistemleri ve kullanıcı deneyimi konularında liderlik yapıyor.</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Ayşe Şahin">
+                    </div>
+                    <div class="team-info">
+                        <h3>Ayşe Şahin</h3>
+                        <p class="team-role">Müşteri Hizmetleri Müdürü</p>
+                        <p class="team-description">Müşteri memnuniyeti ve satış sonrası destek uzmanı. 7/24 müşteri desteği ekibinin koordinasyonunu sağlıyor.</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <h2>Rakamlarla Totech</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15.000+</div>
+                    <div class="stat-label">Satılan Ürün</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10.000+</div>
+                    <div class="stat-label">Mutlu Müşteri</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Yıllık Deneyim</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Müşteri Desteği</div>
+                </div>
+            </div>
+        </section>
+        <section class="section contact-section">
+            <h2>İletişime Geçin</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Mağaza Adresimiz</h4>
+                            <p>Teknoloji Merkezi<br>E-Ticaret Caddesi No: 123<br>İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Müşteri Hizmetleri</h4>
+                            <p>+90 212 123 45 67<br>+90 555 123 45 67</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-posta</h4>
+                            <p>satis@totech.com<br>destek@totech.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Sorularınız mı Var?</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Konu" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Mesajınız veya ürün hakkında sorunuz" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Mesaj Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Tema sistemi - Geliştirilmiş versiyon
+        function setTheme(theme) {
+            const navbar = document.getElementById('navbar');
+            const body = document.body;
+            
+            // Eski tema sınıflarını temizle
+            navbar.className = navbar.className.replace(/navbar-(light|dark|blue)/g, '');
+            body.className = body.className.replace(/theme-(light|dark|blue)/g, '');
+            
+            // Yeni tema sınıflarını ekle
+            navbar.classList.add(`navbar-${theme}`);
+            body.classList.add(`theme-${theme}`);
+            
+            // Tema tercihini kaydet
+            localStorage.setItem('theme', theme);
+            
+            // Buton metnini güncelle
+            updateThemeButtonText(theme);
+            
+            // Dropdown'u kapat
+            closeThemeDropdown();
+            
+            // Tema değişikliği için animasyon
+            body.style.opacity = '0.95';
+            setTimeout(() => {
+                body.style.opacity = '1';
+            }, 150);
+        }
+        
+        function updateThemeButtonText(theme) {
+            const themeNames = {
+                'light': 'Açık Tema',
+                'dark': 'Koyu Tema', 
+                'blue': 'Soft Tema'
+            };
+            const button = document.querySelector('.theme-dropdown-btn span');
+            if (button) {
+                button.textContent = themeNames[theme] || 'Tema';
+            }
+        }
+        
+        function toggleThemeDropdown() {
+            const dropdown = document.getElementById('themeDropdown');
+            const button = document.querySelector('.theme-dropdown-btn');
+            
+            if (dropdown.classList.contains('show')) {
+                closeThemeDropdown();
+            } else {
+                dropdown.classList.add('show');
+                button.classList.add('active');
+            }
+        }
+        
+        function closeThemeDropdown() {
+            const dropdown = document.getElementById('themeDropdown');
+            const button = document.querySelector('.theme-dropdown-btn');
+            dropdown.classList.remove('show');
+            button.classList.remove('active');
+        }
+        
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.navbar-menu');
+            const toggle = document.querySelector('.navbar-toggle');
+            
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+        
+        // Sayfa yüklendiğinde çalışacak fonksiyonlar
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dropdown dışına tıklama kontrolü
+            document.addEventListener('click', function(event) {
+                const dropdown = document.querySelector('.theme-dropdown');
+                if (!dropdown.contains(event.target)) {
+                    closeThemeDropdown();
+                }
+            });
+            
+            // Mobil menü toggle
+            const mobileToggle = document.querySelector('.navbar-toggle');
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', toggleMobileMenu);
+            }
+            
+            // Navigasyon linklerine tıklama olayları
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const menu = document.querySelector('.navbar-menu');
+                    const toggle = document.querySelector('.navbar-toggle');
+                    menu.classList.remove('active');
+                    toggle.classList.remove('active');
+                });
+            });
+            
+            // Kaydedilmiş temayı yükle
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            setTheme(savedTheme);
+            
+            // Profil kartlarına staggered animasyon ekle
+            const profileCards = document.querySelectorAll('.profile-card');
+            profileCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 150}ms`;
+                card.classList.add('animate-fade-in');
+            });
+            
+            // İstatistik kartlarına animasyon
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 100}ms`;
+                card.classList.add('animate-fade-in');
+            });
+            
+            // Aktif sayfa linkini işaretle
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const activeLink = document.querySelector(`[href="${currentPage}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html> 
