@@ -16,8 +16,13 @@
     
     <nav class="navbar" id="navbar">
         <div class="navbar-container">
-            <div class="navbar-brand">
-                <a href="index.html"> <h1> Totech</h1></a>
+                        <div class="navbar-brand">
+                <a href="index.html">
+                    <h1>
+                        <i class="fas fa-microchip"></i>
+                        Totech
+                    </h1>
+                </a>
             </div>
             
             <div class="navbar-menu">
@@ -28,9 +33,23 @@
                 </ul>
             </div>
             
-            <div class="navbar-search">
-                <input type="search" placeholder="Ürün ara..." class="search-input">
-                <button type="submit" class="search-btn">Ara</button>
+            <!-- Arama Wrapper -->
+            <div class="search-wrapper">
+                <!-- Arama Toggle Butonu -->
+                <button class="search-toggle-btn" onclick="toggleSearchBar()" aria-label="Arama çubuğunu aç/kapat">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <!-- Arama Alanı (Başlangıçta Gizli) -->
+                <div class="navbar-search" id="navbarSearch">
+                    <div class="search-input-container">
+                        <input type="search" placeholder="Ürün ara..." class="search-input" id="searchInput">
+                    </div>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Ara</span>
+                    </button>
+                </div>
             </div>
             
             <div class="theme-dropdown">
@@ -55,11 +74,11 @@
                 </div>
             </div>
             
-            <div class="navbar-toggle">
+            <button class="navbar-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -399,8 +418,31 @@
             const menu = document.querySelector('.navbar-menu');
             const toggle = document.querySelector('.navbar-toggle');
             
+            const isOpen = menu.classList.contains('active');
+            
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', !isOpen);
+        }
+        
+        function toggleSearchBar() {
+            const searchBar = document.getElementById('navbarSearch');
+            const searchToggle = document.querySelector('.search-toggle-btn');
+            
+            const isOpen = searchBar.classList.contains('active');
+            
+            searchBar.classList.toggle('active');
+            searchToggle.classList.toggle('active');
+            
+            // Eğer arama açılıyorsa, input'a focus ver
+            if (!isOpen) {
+                setTimeout(() => {
+                    const searchInput = searchBar.querySelector('.search-input');
+                    if (searchInput) {
+                        searchInput.focus();
+                    }
+                }, 300); // Animasyon tamamlandıktan sonra focus
+            }
         }
 
         // Sayfa yüklendiğinde çalışacak fonksiyonlar
@@ -410,6 +452,17 @@
                 const dropdown = document.querySelector('.theme-dropdown');
                 if (!dropdown.contains(event.target)) {
                     closeThemeDropdown();
+                }
+                
+                // Arama dışına tıklama kontrolü
+                const searchBar = document.getElementById('navbarSearch');
+                const searchToggle = document.querySelector('.search-toggle-btn');
+                
+                if (searchBar && searchBar.classList.contains('active')) {
+                    if (!searchBar.contains(event.target) && !searchToggle.contains(event.target)) {
+                        searchBar.classList.remove('active');
+                        searchToggle.classList.remove('active');
+                    }
                 }
             });
             
@@ -428,6 +481,19 @@
                     menu.classList.remove('active');
                     toggle.classList.remove('active');
                 });
+            });
+            
+            // ESC tuşu ile arama alanını kapat
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    const searchBar = document.getElementById('navbarSearch');
+                    const searchToggle = document.querySelector('.search-toggle-btn');
+                    
+                    if (searchBar && searchBar.classList.contains('active')) {
+                        searchBar.classList.remove('active');
+                        searchToggle.classList.remove('active');
+                    }
+                }
             });
             
             // Kaydedilmiş temayı yükle
